@@ -26,10 +26,10 @@ public class ButtonBehaviour : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("level 1");
+        SceneManager.LoadScene("Start");
     }
 
-    public  void GoToInstructions()
+    public  void HowToPlay()
     {
         
         SceneManager.LoadScene("How To Play");
