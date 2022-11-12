@@ -47,7 +47,6 @@ public class PlayerController : MonoBehaviour
             }
 
             // Set direction of sprite to movement direction
-            // todo: Set player direction when walking up and down
             if(movementInput.x < 0) {
                 spriteRenderer.flipX = true;
             } else if (movementInput.x > 0) {
