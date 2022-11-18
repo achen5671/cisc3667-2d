@@ -18,12 +18,19 @@ public class PlayerController : MonoBehaviour
 
     bool canMove = true;
 
+    // unused now
+    private PickUp pickUp;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         // animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // unused
+        // pickUp = gameObject.GetComponent<PickUp>();
+        // pickUp.Direction = new Vector2(0, -1);
     }
 
     private void FixedUpdate() {
@@ -52,6 +59,12 @@ public class PlayerController : MonoBehaviour
             } else if (movementInput.x > 0) {
                 spriteRenderer.flipX = false;
             }
+
+
+            // for pickup. place object in the direction the sprite is facing
+            // todo: this is not working yet.
+            // see: https://www.youtube.com/watch?v=-V1O5FGQVY8&ab_channel=SmartPenguins
+            // if (movementInput.sqrMagnitude) pickUp.Direction = movementInput.normalize;
         }
     }
 
