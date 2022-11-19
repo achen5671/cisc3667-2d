@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ButtonBehaviour : MonoBehaviour
 {
+     [SerializeField] InputField playerNameInput;
+     
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,10 @@ public class ButtonBehaviour : MonoBehaviour
 
     public void PlayGame()
     {
+        // This is to set the name in the PersistentData so that it follows along throughout the game
+        string s = playerNameInput.text;
+        PersistentData.Instance.SetName(s);
+
         SceneManager.LoadScene("Start");
     }
 
