@@ -317,19 +317,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6996084999393635827, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_Size.x
-      value: 2.466669
+      value: 2.1826634
       objectReference: {fileID: 0}
     - target: {fileID: 6996084999393635827, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_Size.y
-      value: 5.135067
+      value: 0.79475594
       objectReference: {fileID: 0}
     - target: {fileID: 6996084999393635827, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_Offset.x
-      value: 0.12123394
+      value: 0.108324766
       objectReference: {fileID: 0}
     - target: {fileID: 6996084999393635827, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_Offset.y
-      value: -0.11528587
+      value: -2.2854414
       objectReference: {fileID: 0}
     - target: {fileID: 8027894023953741746, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_RootOrder
@@ -405,7 +405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142532876127218106, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8142532876127218106, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_Constraints
@@ -421,6 +421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6421021574507316045, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+    - {fileID: 253920418893655423, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
 --- !u!1 &1677710033
 GameObject:
@@ -2946,7 +2947,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0008593425, y: 0.0047968626}
+  m_Offset: {x: -0.00037854165, y: 0.004177898}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2957,7 +2958,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16607283, y: 0.14199448}
+  m_Size: {x: 0.14379068, y: 0.14075655}
   m_EdgeRadius: 0
 --- !u!212 &1716381689
 SpriteRenderer:
@@ -2997,8 +2998,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 150399999
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -1855930229, guid: 29677cbc86b464b178f6a158b38678c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
