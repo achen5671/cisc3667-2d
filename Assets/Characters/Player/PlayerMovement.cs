@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
    private Vector3 change;
 
    void Start() {
-    myRigidBody = GetComponent<Rigidbody2D>();
+     myRigidBody = GetComponent<Rigidbody2D>();
    }
 
    void Update() {

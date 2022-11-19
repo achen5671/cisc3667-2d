@@ -11,6 +11,7 @@ public class PickUp : MonoBehaviour
 
     void Update()
     {
+        // pick up or drop item
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (itemHolding)
@@ -35,6 +36,8 @@ public class PickUp : MonoBehaviour
             }
 
         }
+
+        // throw item
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (itemHolding)
@@ -45,6 +48,7 @@ public class PickUp : MonoBehaviour
         }
     }
 
+    // todo: not working
     IEnumerator ThrowItem(GameObject item)
     {
         Vector3 startPoint = item.transform.position;
