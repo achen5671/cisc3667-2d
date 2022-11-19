@@ -26,7 +26,9 @@ public class PersistentData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerScore = 0;
+        // player will start out with 100 points and will lose points throughout the game
+    
+        playerScore = 100;
         playerName = "";
         
     }
