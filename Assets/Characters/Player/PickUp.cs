@@ -35,7 +35,7 @@ public class PickUp : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (itemHolding)
             {
