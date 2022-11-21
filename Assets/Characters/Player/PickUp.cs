@@ -42,8 +42,9 @@ public class PickUp : MonoBehaviour
         {
             if (itemHolding)
             {
-                StartCoroutine(ThrowItem(itemHolding));
-                itemHolding = null;
+                //StartCoroutine(ThrowItem(itemHolding));
+                //itemHolding = null;
+                Destroy(itemHolding);
             }
         }
     }
