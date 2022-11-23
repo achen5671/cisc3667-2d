@@ -40,4 +40,11 @@ public class ButtonBehaviour : MonoBehaviour
         
         SceneManager.LoadScene("How To Play");
     }
+
+    public  void Settings()
+    {
+        
+        SceneManager.LoadScene("Settings");
+    }
+
 }
