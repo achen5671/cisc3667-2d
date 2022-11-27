@@ -7,6 +7,8 @@ public class PersistentData : MonoBehaviour
 
     [SerializeField] int playerScore;
     [SerializeField] string playerName;
+    [SerializeField] float gameVolume;
+
 
     public static PersistentData Instance;
 
@@ -30,6 +32,7 @@ public class PersistentData : MonoBehaviour
     
         playerScore = 100;
         playerName = "";
+        gameVolume = 0.0F;
         
     }
 
@@ -49,6 +52,11 @@ public class PersistentData : MonoBehaviour
         playerScore = s;
     }
 
+    public void SetVolume(float vol)
+    {
+        gameVolume = vol;
+    }
+
     public string GetName()
     {
         return playerName;
@@ -57,6 +65,12 @@ public class PersistentData : MonoBehaviour
     public int GetScore()
     {
         return playerScore;
+    }
+
+    public float GetVolume()
+    {
+        return gameVolume;
+
     }
 
 
