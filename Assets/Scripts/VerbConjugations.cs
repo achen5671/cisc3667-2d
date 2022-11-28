@@ -24,9 +24,9 @@ public class VerbConjugations : MonoBehaviour
         // values are separated by commas
         // Can value be a vector or an array?
         // Is there a better way to handle this?
-        // todo: add more words adn randomly spawn the word/box on the screen.
+        // todo: add more words and randomly spawn the word/box on the screen.
         // todo: need to add definitions / translate word to english
-        // Easier way /hack. Created a another scene as a cheat sheet (I like this idea, simple and save time)
+        // Easier way /hack. Created a another scene or overlap as a cheat sheet (I like this idea, simple and save time)
         var conjugations = new Dictionary<string, string>(){
             {"yo", "soy, he, estoy, tengo, hago"},
             {"tu", "eres, has, estas, tienes, haces"},
@@ -39,5 +39,4 @@ public class VerbConjugations : MonoBehaviour
             PlayerPrefs.SetString(key, value);
         }
     }
-
 }

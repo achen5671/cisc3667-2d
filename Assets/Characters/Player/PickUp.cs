@@ -38,19 +38,16 @@ public class PickUp : MonoBehaviour
 
         }
 
-        // throw item
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (itemHolding)
-            {
-                //StartCoroutine(ThrowItem(itemHolding));
-                // I need to get text in the sign and text in the chest
-                // Sign verbSign = itemHolding.GetComponent<Sign>();
-                // Debug.Log(verbSign.CheckConjugation("yo", verbSign.dialog));
-                // Destroy(itemHolding);
-                itemHolding = null;
-            }
-        }
+        // unused for nowthrow item. Testing
+        // if (Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     if (itemHolding)
+        //     {
+        //         StartCoroutine(ThrowItem(itemHolding));
+        //         Destroy(itemHolding);
+        //         itemHolding = null;
+        //     }
+        // }
     }
 
     // return item that the player is holding
@@ -58,22 +55,22 @@ public class PickUp : MonoBehaviour
         return itemHolding.GetComponent<Sign>().dialog;
     }
 
-    public GameObject GetItem() {
-        return itemHolding;
+    public void DestroyItem() {
+        Destroy(gameObject);
     }
 
     // todo: not working
-    IEnumerator ThrowItem(GameObject item)
-    {
-        Vector3 startPoint = item.transform.position;
-        Vector3 endPoint = transform.position + Direction * 2;
-        item.transform.parent = null;
-        for (int i = 0; i < 25; i++)
-        {
-            item.transform.position = Vector3.Lerp(startPoint, endPoint, i * .04f);
-            yield return null;
-        }
-        if (item.GetComponent<Rigidbody2D>())
-            item.GetComponent<Rigidbody2D>().simulated = true;
-    }
+    // IEnumerator ThrowItem(GameObject item)
+    // {
+    //     Vector3 startPoint = item.transform.position;
+    //     Vector3 endPoint = transform.position + Direction * 2;
+    //     item.transform.parent = null;
+    //     for (int i = 0; i < 25; i++)
+    //     {
+    //         item.transform.position = Vector3.Lerp(startPoint, endPoint, i * .04f);
+    //         yield return null;
+    //     }
+    //     if (item.GetComponent<Rigidbody2D>())
+    //         item.GetComponent<Rigidbody2D>().simulated = true;
+    // }
 }
