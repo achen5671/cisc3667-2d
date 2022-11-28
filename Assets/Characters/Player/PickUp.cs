@@ -8,7 +8,7 @@ public class PickUp : MonoBehaviour
     public Transform holdSpot;
     public LayerMask pickUpMask;
     public Vector3 Direction { get; set; }
-    private GameObject itemHolding;
+    public GameObject itemHolding;
 
     void Update()
     {

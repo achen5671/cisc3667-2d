@@ -55,11 +55,13 @@ public class Sign : MonoBehaviour
                     Debug.Log("SCORE!");
                     // Destroy(verbSign.GetItem());
                     // Destroy(gameObject);
+                    Destroy(verbSign.itemHolding);
                     // TODO: destory chest
                 }else{
                     ScoreKeeper.MinusScore();
                     // todo: play sound
                     Debug.Log("WRONG!");
+                    Destroy(verbSign.itemHolding);
 
                 }
             } 
