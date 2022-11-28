@@ -8,7 +8,7 @@ public class ScoreKeeper : MonoBehaviour
 {
     [SerializeField] static int score;
     const int DEFAULT_POINTS = 25;
-    [SerializeField] Text scoreTxt;
+    [SerializeField] public Text scoreTxt;
 
 
     // Start is called before the first frame update
@@ -26,14 +26,12 @@ public class ScoreKeeper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DisplayScore();
     }
 
-    public void AddPoints(int points)
+    public static void AddPoints(int points)
     {
-        score -= points;
-
-        DisplayScore();
+        score += points;
 
         PersistentData.Instance.SetScore(score);
 
@@ -41,16 +39,18 @@ public class ScoreKeeper : MonoBehaviour
     }
 
 
-    public void AddPoints()
+    public static void AddScore()
     {
         AddPoints(DEFAULT_POINTS);
+    }
+    
+    public static void MinusScore()
+    {
+        AddPoints(-DEFAULT_POINTS);
     }
 
     public void DisplayScore()
     {
         scoreTxt.text = "Score: " + score;
     }
-
-
-
 }

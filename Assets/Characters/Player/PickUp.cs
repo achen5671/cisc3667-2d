@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PickUp : MonoBehaviour
 {
@@ -43,10 +44,22 @@ public class PickUp : MonoBehaviour
             if (itemHolding)
             {
                 //StartCoroutine(ThrowItem(itemHolding));
-                //itemHolding = null;
-                Destroy(itemHolding);
+                // I need to get text in the sign and text in the chest
+                // Sign verbSign = itemHolding.GetComponent<Sign>();
+                // Debug.Log(verbSign.CheckConjugation("yo", verbSign.dialog));
+                // Destroy(itemHolding);
+                itemHolding = null;
             }
         }
+    }
+
+    // return item that the player is holding
+    public string GetItemHoldingDialog() {
+        return itemHolding.GetComponent<Sign>().dialog;
+    }
+
+    public GameObject GetItem() {
+        return itemHolding;
     }
 
     // todo: not working
