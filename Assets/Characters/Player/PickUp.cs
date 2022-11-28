@@ -39,15 +39,16 @@ public class PickUp : MonoBehaviour
         }
 
         // unused for nowthrow item. Testing
-        // if (Input.GetKeyDown(KeyCode.Q))
-        // {
-        //     if (itemHolding)
-        //     {
-        //         StartCoroutine(ThrowItem(itemHolding));
-        //         Destroy(itemHolding);
-        //         itemHolding = null;
-        //     }
-        // }
+        // Used to destroy item for now but will minus points
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (itemHolding)
+            {
+                // StartCoroutine(ThrowItem(itemHolding));
+                Destroy(itemHolding);
+                // itemHolding = null;
+            }
+        }
     }
 
     // return item that the player is holding

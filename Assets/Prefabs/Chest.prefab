@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
-  dialog: soy
+  dialog: 
   playerInRange: 0
   isChest: 1
 --- !u!61 &5422159271953365795
