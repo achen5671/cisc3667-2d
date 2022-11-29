@@ -98,7 +98,7 @@ public class Sign : MonoBehaviour
     }
 
     public void GetRandomConjugatedVerb() {
-        string[] pronouns = {"yo", "tu", "el/ella/usted", "nosotro", "ellos/ellas/ustedes"};
+        string[] pronouns = {"yo", "tu", "el/ella/usted", "nosotros", "ellos/ellas/ustedes"};
 
         int value = random.Next(pronouns.Length);
         string pronoun = pronouns[value];

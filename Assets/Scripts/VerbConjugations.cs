@@ -8,7 +8,7 @@ public class VerbConjugations : MonoBehaviour
     public const int NUM_VERBS = 5;
 
     // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
         ConjugationList();
         Debug.Log("LOGGED");
