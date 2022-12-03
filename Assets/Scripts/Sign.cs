@@ -24,9 +24,20 @@ public class Sign : MonoBehaviour
             // dialogBox = _dialogBox;
             // dialogText = _dialogText;
             // dialog = dialogText.text;
+            dialogBox = GameObject.Find("dialog box");
+            dialogText = GameObject.FindGameObjectWithTag("DialogText").GetComponent<Text>();
+            dialog = dialogText.text;
             // If it's a chest, randomly give dialog a verb from the list
             GetRandomConjugatedVerb();
         }
+    }
+
+    // The greeting dialog box needs to get off the screen this script will do that after 3 seconds
+    IEnumerator Start()
+    {
+        dialogText.text = "Welcome to our game!! " + PersistentData.Instance.GetName() + " Have Fun!!";
+        yield return new WaitForSeconds(3f);
+        dialogBox.SetActive(false);
     }
 
     // Update is called once per frame

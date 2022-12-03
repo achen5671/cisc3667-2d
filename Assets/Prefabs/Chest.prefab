@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5422159271953365795}
   m_Layer: 6
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   dialog: 
   playerInRange: 0
   isChest: 1
+  greeting: 1
 --- !u!61 &5422159271953365795
 BoxCollider2D:
   m_ObjectHideFlags: 0

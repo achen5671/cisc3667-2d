@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - dialogueBox
-  - dialogueText
   - Wall
+  - DialogBox
+  - DialogText
+  - Canvas
+  - Chest
   layers:
   - Default
   - TransparentFX
