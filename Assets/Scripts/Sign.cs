@@ -13,17 +13,23 @@ public class Sign : MonoBehaviour
     public bool playerInRange;
     static System.Random random = new System.Random();
     public bool isChest = false;
+    public bool isSign = true;
+    // [SerializeField] AudioSource Source;
+    [SerializeField] AudioClip wrong;
+    [SerializeField] AudioClip correct;
 
     // Start is called before the first frame update
     void Awake()
     {
         if (isChest) {
+            isSign = false;
             // var _dialogText = GetComponent<Sign>().transform.GetChild(0).GetComponent<Text>();
             // var _dialogBox = GameObject.Find("Canvas").GetComponent<Transform>().Find("dialog box").GetComponent<GameObject>();
 
             // dialogBox = _dialogBox;
             // dialogText = _dialogText;
             // dialog = dialogText.text;
+            // Source = gameObject.GetComponent<AudioSource>();
             dialogBox = GameObject.Find("dialog box");
             dialogText = GameObject.FindGameObjectWithTag("DialogText").GetComponent<Text>();
             dialog = dialogText.text;
@@ -58,7 +64,7 @@ public class Sign : MonoBehaviour
             playerInRange = true;
 
             PickUp verbSign = other.GetComponent<PickUp>();
-            if (verbSign != null) {
+            if (verbSign != null && isSign) {
                 if(CheckConjugation(dialog, verbSign.GetItemHoldingDialog())){
                     // add score
                     ScoreKeeper.AddScore();
@@ -66,11 +72,14 @@ public class Sign : MonoBehaviour
                     Debug.Log("SCORE!");
                     // Destroy(verbSign.GetItem());
                     // Destroy(gameObject);
+                    GetComponent<AudioSource>().PlayOneShot(correct);
                     Destroy(verbSign.itemHolding);
                     // TODO: destory chest
                 }else{
                     ScoreKeeper.MinusScore();
                     // todo: play sound
+                    
+                    GetComponent<AudioSource>().PlayOneShot(wrong);
                     Debug.Log("WRONG!");
                     Destroy(verbSign.itemHolding);
 
