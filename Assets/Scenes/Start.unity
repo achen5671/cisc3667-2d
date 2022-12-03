@@ -1881,10 +1881,95 @@ PrefabInstance:
       propertyPath: m_UseFullKinematicContacts
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9005947147976734221, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947147976734221, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2254012
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9027027
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.046464354
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.59067065
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155242, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155242, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155242, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5559103
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155242, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155242, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0366
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155246, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3db38412b8e6458a844dc6451e4d592, type: 3}
+    - target: {fileID: 9005947148585155246, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6421021574507316045, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
     - {fileID: 253920418893655423, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+--- !u!1 &1583143377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9005947148585155235, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+  m_PrefabInstance: {fileID: 1583143376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1583143378
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583143377}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b09368c44d6e4dabb8712ad00d9d2a3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1641376133
 PrefabInstance:
   m_ObjectHideFlags: 0
