@@ -44,18 +44,22 @@ public class ButtonBehaviour : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
 
-    public  void HowToPlay()
+    public void HowToPlay()
     {
-         s = playerNameInput.text;
+        s = playerNameInput.text;
         PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("How To Play");
     }
 
-    public  void Settings()
+    public void Settings()
     {
-         s = playerNameInput.text;
+        s = playerNameInput.text;
         PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Settings");
+    }
+
+    public void EndGame() {
+        SceneManager.LoadScene("EndScene");
     }
 
 }
