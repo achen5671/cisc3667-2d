@@ -7,6 +7,8 @@ public class PersistentData : MonoBehaviour
 
     [SerializeField] int playerScore;
     [SerializeField] string playerName;
+
+    // todo: create SoundManager.cs
     [SerializeField] float gameVolume;
 
 

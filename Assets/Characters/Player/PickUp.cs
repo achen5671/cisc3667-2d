@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PickUp : MonoBehaviour
 {
     public Transform holdSpot;
     public LayerMask pickUpMask;
     public Vector3 Direction { get; set; }
-    private GameObject itemHolding;
+    public GameObject itemHolding;
 
     void Update()
     {
@@ -37,30 +38,40 @@ public class PickUp : MonoBehaviour
 
         }
 
-        // throw item
+        // unused for nowthrow item. Testing
+        // Used to destroy item for now but will minus points
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (itemHolding)
             {
-                //StartCoroutine(ThrowItem(itemHolding));
-                //itemHolding = null;
+                // StartCoroutine(ThrowItem(itemHolding));
                 Destroy(itemHolding);
+                // itemHolding = null;
             }
         }
     }
 
-    // todo: not working
-    IEnumerator ThrowItem(GameObject item)
-    {
-        Vector3 startPoint = item.transform.position;
-        Vector3 endPoint = transform.position + Direction * 2;
-        item.transform.parent = null;
-        for (int i = 0; i < 25; i++)
-        {
-            item.transform.position = Vector3.Lerp(startPoint, endPoint, i * .04f);
-            yield return null;
-        }
-        if (item.GetComponent<Rigidbody2D>())
-            item.GetComponent<Rigidbody2D>().simulated = true;
+    // return item that the player is holding
+    public string GetItemHoldingDialog() {
+        return itemHolding.GetComponent<Sign>().dialog;
     }
+
+    public void DestroyItem() {
+        Destroy(gameObject);
+    }
+
+    // todo: not working
+    // IEnumerator ThrowItem(GameObject item)
+    // {
+    //     Vector3 startPoint = item.transform.position;
+    //     Vector3 endPoint = transform.position + Direction * 2;
+    //     item.transform.parent = null;
+    //     for (int i = 0; i < 25; i++)
+    //     {
+    //         item.transform.position = Vector3.Lerp(startPoint, endPoint, i * .04f);
+    //         yield return null;
+    //     }
+    //     if (item.GetComponent<Rigidbody2D>())
+    //         item.GetComponent<Rigidbody2D>().simulated = true;
+    // }
 }
