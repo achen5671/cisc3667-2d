@@ -58,6 +58,7 @@ public class ButtonBehaviour : MonoBehaviour
         SceneManager.LoadScene("Settings");
     }
 
+    //unused for now
     public void EndGame() {
         SceneManager.LoadScene("EndScene");
     }
