@@ -19,7 +19,6 @@ public class ScoreKeeper : MonoBehaviour
 
         score = PersistentData.Instance.GetScore();
         DisplayScore();
-
         
     }
 
@@ -27,6 +26,10 @@ public class ScoreKeeper : MonoBehaviour
     void Update()
     {
         DisplayScore();
+    }
+
+    public static int GetScore() {
+        return score;
     }
 
     public static void AddPoints(int points)
