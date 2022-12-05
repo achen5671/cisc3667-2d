@@ -11,7 +11,6 @@ public class VerbConjugations : MonoBehaviour
     public void Awake()
     {
         ConjugationList();
-        Debug.Log("LOGGED");
     }
 
     // Update is called once per frame
