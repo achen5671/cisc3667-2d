@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
    const int walk_down = 1;
    const int walk_up = 2;
    const int walk_side = 3;
+   public bool facingRight = true;
    
    void Start() {
      myRigidBody = GetComponent<Rigidbody2D>();
@@ -51,11 +52,13 @@ public class PlayerMovement : MonoBehaviour
         }
         
         else if(Input.GetKey("right")) {
+          //if(facingRight == true)
           animator.SetInteger("Motion", walk_side); //Play Walk Side Animation
           MoveCharacter(); 
         }
 
         else if(Input.GetKey("left")) {
+          transform.Rotate(new Vector2(0, 180));
           animator.SetInteger("Motion", walk_side); //Play Walk Side Animation Flipped
           MoveCharacter(); 
         }
