@@ -56,4 +56,8 @@ public class ScoreKeeper : MonoBehaviour
     {
         scoreTxt.text = "Score: " + score;
     }
+
+    public static void ResetScore() {
+        score = 0;
+    }
 }
