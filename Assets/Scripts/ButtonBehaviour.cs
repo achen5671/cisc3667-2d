@@ -30,18 +30,25 @@ public class ButtonBehaviour : MonoBehaviour
     
     public void MainMenu()
     {
-         s = playerNameInput.text;
-        PersistentData.Instance.SetName(s);
+        s = playerNameInput.text;
+        //PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Menu");
     }
 
     public void PlayGame()
     {
-        // This is to set the name in the PersistentData so that it follows along throughout the game
-        s = playerNameInput.text;
-        PersistentData.Instance.SetName(s);
+        if(playerNameInput.text == "") {
+            //Prevents Player from Starting the game without a name.
+            Debug.Log("Player Name has not been input. Please put in a name.");
+        }
 
-        SceneManager.LoadScene("Start");
+        else {
+            // This is to set the name in the PersistentData so that it follows along throughout the game
+            s = playerNameInput.text;
+            PersistentData.Instance.SetName(s);
+
+            SceneManager.LoadScene("Start");
+        }
     }
 
     public void HowToPlay()
