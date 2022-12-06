@@ -8,6 +8,8 @@ public class ButtonBehaviour : MonoBehaviour
 {
      [SerializeField] InputField playerNameInput;
      [SerializeField] string s;
+     [SerializeField] GameObject Warning;
+     private IEnumerator coroutine;
      
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class ButtonBehaviour : MonoBehaviour
             playerNameInput.text = s;
         }
         
+        Warning.SetActive(false);
     }
 
     // Update is called once per frame
@@ -38,6 +41,8 @@ public class ButtonBehaviour : MonoBehaviour
     public void PlayGame()
     {
         if(playerNameInput.text == "") {
+            coroutine = showWarning(2.0F);
+            StartCoroutine(coroutine);
             //Prevents Player from Starting the game without a name.
             Debug.Log("Player Name has not been input. Please put in a name.");
         }
@@ -70,4 +75,10 @@ public class ButtonBehaviour : MonoBehaviour
         SceneManager.LoadScene("EndScene");
     }
 
+    private IEnumerator showWarning(float waitTime)
+    {
+        Warning.SetActive(true);
+        yield return new WaitForSeconds(waitTime);
+        Warning.SetActive(false);
+    }
 }
