@@ -1619,6 +1619,7 @@ MonoBehaviour:
   timerSlider: {fileID: 1804236321}
   timerText: {fileID: 1950714384}
   gameTime: 3
+  stopTimer: 0
   timesUpText: {fileID: 1096810224}
 --- !u!4 &1294058914
 Transform:
@@ -2046,6 +2047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNameInput: {fileID: 1366469565}
   s: 
+  Warning: {fileID: 0}
 --- !u!114 &1435033242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,6 +2235,18 @@ PrefabInstance:
       value: -0.59067065
       objectReference: {fileID: 0}
     - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.099999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155241, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.5
       objectReference: {fileID: 0}
@@ -2260,6 +2274,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.0702
       objectReference: {fileID: 0}
+    - target: {fileID: 9005947148585155243, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 1294058913}
     - target: {fileID: 9005947148585155246, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
   const int walk_up = 2;
   const int walk_side = 3;
   public bool isFacingRight = true;
+  public Timer Timer;
   
   void Start() {
     myRigidBody = GetComponent<Rigidbody2D>();
@@ -29,6 +30,12 @@ public class PlayerMovement : MonoBehaviour
       change = Vector3.zero;
       change.x = Input.GetAxisRaw("Horizontal");
       change.y = Input.GetAxisRaw("Vertical");
+
+      if(Timer.stopTimer)
+      {
+        speed = 0;
+      }
+      
   }
 
   void FixedUpdate() {
