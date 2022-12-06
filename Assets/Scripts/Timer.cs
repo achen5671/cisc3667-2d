@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 // see: https://www.youtube.com/watch?v=S12x7txHS1c
 public class Timer : MonoBehaviour
 {
-    private bool startTimer = false;
+    pr/ivate bool startTimer = false;
     public Slider timerSlider;
     public Text timerText;
     public float gameTime;

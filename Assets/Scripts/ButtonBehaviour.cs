@@ -30,7 +30,7 @@ public class ButtonBehaviour : MonoBehaviour
     
     public void MainMenu()
     {
-         s = playerNameInput.text;
+        s = playerNameInput.text;
         PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Menu");
     }
