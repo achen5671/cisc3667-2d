@@ -28,11 +28,11 @@ public class VerbConjugations : MonoBehaviour
         // todo: need to add definitions / translate word to english
         // Easier way /hack. Created a another scene or overlap as a cheat sheet (I like this idea, simple and save time)
         var conjugations = new Dictionary<string, string>(){
-            {"yo", "soy, he, estoy, tengo, hago"},
-            {"tu", "eres, has, estas, tienes, haces"},
-            {"el/ella/usted", "es, ha, esta, tiene, hace"},
-            {"nosotros", "somos, hemos, estamos, tenemos, hacemos"},
-            {"ellos/ellas/ustedes", "son, han, estan, tienen, hacen"}
+            {"yo", "soy ,he, estoy, tengo, hago, puedo, digo, voy, veo, doy, se, quiero, llego, paso, debo, pongo, parezco, quedo, creo, hablo, llevo, dejo, sigo, encuentro, llamo, como"},
+            {"tu", "eres, has, estas, tienes, haces, puedes, dices, vas, ves, das, sabes, quieres, llegas, pasas, debes, pones, paraces, quedas, crees, hablas, llevas, dejas, sigues, encuentras, llamas, comes"},
+            {"el/ella/usted", "es, ha, esta, tiene, hace, puede, dice, va, ve, da, sabe, quiere, llega, pasa, debe, pone, parace, queda, cree, habla, lleva, deja, sigue, encuentra, llama, come"},
+            {"nosotros", "somos, hemos, estamos, tenemos, hacemos, podemos, decimos, vamos, vemos, damos, sabemos, queremos, llegamos, pasamos, debemos, ponemos, paracemos, quedamos, creemos, hablamos, llevamos, dejamos, segimos, encontramos, llamamos, comemos"},
+            {"ellos/ellas/ustedes", "son, han, estan, tienen, hacen, pueden, dicen, van, ven, dan, saben, quieren, llegan, pasan, deben, ponen, paracen, quedan, creen, hablan, llevan, dejan, siguen, encuentran, llaman, comen"}
         };
 
         foreach (var (key, value) in conjugations){
