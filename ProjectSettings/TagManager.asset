@@ -9,6 +9,8 @@ TagManager:
   - DialogText
   - Canvas
   - Chest
+  - TimesUpText
+  - TimesUpSlider
   layers:
   - Default
   - TransparentFX
