@@ -60,6 +60,7 @@ public class Timer : MonoBehaviour
         {
             coroutine = endOfGame(5.0F);
             StartCoroutine(coroutine);
+            StopCoroutine(coroutine);
         }
 
     }
