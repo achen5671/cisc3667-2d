@@ -75,6 +75,15 @@ public class ButtonBehaviour : MonoBehaviour
         SceneManager.LoadScene("EndScene");
     }
 
+    public void CheatSheet() {
+        SceneManager.LoadScene("Cheat sheet");
+    }
+
+    public void BackToPlay() {
+        SceneManager.LoadScene("Start");
+    }
+    
+
     private IEnumerator showWarning(float waitTime)
     {
         Warning.SetActive(true);
