@@ -10,6 +10,10 @@ public class ButtonBehaviour : MonoBehaviour
      [SerializeField] string s;
      [SerializeField] GameObject Warning;
      private IEnumerator coroutine;
+     private Scene scene;
+     public GameObject timesUpText;
+     public GameObject timerSlider;
+    
      
     // Start is called before the first frame update
     void Start()
@@ -30,11 +34,28 @@ public class ButtonBehaviour : MonoBehaviour
         
     }
 
+    void LateUpdate()
+    {
+        scene = SceneManager.GetActiveScene();
+        if(scene.name == "Cheat sheet" && Timer.onGoingTime == null)
+        {
+            if(timesUpText == null)
+            {
+                timesUpText = GameObject.FindGameObjectWithTag("TimesUpText");
+                timesUpText.SetActive(false);
+                timerSlider = GameObject.FindGameObjectWithTag("TimesUpSlider");
+                timerSlider.SetActive(false);
+            }
+            
+
+        }
+    }
+
     
     public void MainMenu()
     {
         s = playerNameInput.text;
-        //PersistentData.Instance.SetName(s);
+        PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Menu");
     }
 
@@ -72,6 +93,7 @@ public class ButtonBehaviour : MonoBehaviour
 
     //unused for now
     public void EndGame() {
+        Timer.onGoingTime.gameTime =0;
         SceneManager.LoadScene("EndScene");
     }
 
@@ -85,6 +107,10 @@ public class ButtonBehaviour : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
     
+    public void CheatSheetWithoutTime() {
+        
+        SceneManager.LoadScene("Cheat sheet");
+    }
 
     private IEnumerator showWarning(float waitTime)
     {

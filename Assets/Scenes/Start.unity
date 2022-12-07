@@ -1618,9 +1618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1804236321}
   timerText: {fileID: 1950714384}
-  gameTime: 3
+  gameTime: 20
   stopTimer: 0
-  dialogbox: {fileID: 0}
   time: 0
   timesUpText: {fileID: 1096810224}
 --- !u!4 &1294058914
@@ -1966,11 +1965,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6670530395124334234, guid: 78596339d13ed4056a7ec0ab248df038, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.96
+      value: 0.273
       objectReference: {fileID: 0}
     - target: {fileID: 6670530395124334234, guid: 78596339d13ed4056a7ec0ab248df038, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.25
+      value: -0.049
       objectReference: {fileID: 0}
     - target: {fileID: 6670530395124334234, guid: 78596339d13ed4056a7ec0ab248df038, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2131,6 +2130,8 @@ MonoBehaviour:
   playerNameInput: {fileID: 1366469565}
   s: 
   Warning: {fileID: 0}
+  timesUpText: {fileID: 0}
+  timerSlider: {fileID: 0}
 --- !u!114 &1435033242
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,7 +18,6 @@ public class Timer : MonoBehaviour
     public Text timerText;
     public float gameTime;
     public bool stopTimer;
-    public GameObject dialogbox;
     private IEnumerator coroutine;
     public float time;
 
@@ -26,7 +25,7 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
-
+        assign();
         if (onGoingTime == null)
         {
             DontDestroyOnLoad(this);
@@ -56,6 +55,11 @@ public class Timer : MonoBehaviour
         {
             assign();
 
+        }
+        if(gameTime <= 0)
+        {
+            coroutine = endOfGame(5.0F);
+            StartCoroutine(coroutine);
         }
 
     }
@@ -105,7 +109,5 @@ public class Timer : MonoBehaviour
         timerSlider.maxValue = gameTime;
         timerSlider.value = gameTime;
         timesUpText.SetActive(false);
-        dialogbox = GameObject.FindGameObjectWithTag("DialogBox");
-        dialogbox.SetActive(false);
     }
 }
