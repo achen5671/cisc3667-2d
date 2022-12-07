@@ -76,10 +76,12 @@ public class ButtonBehaviour : MonoBehaviour
     }
 
     public void CheatSheet() {
+        Timer.onGoingTime.gameTime = Timer.onGoingTime.time;
         SceneManager.LoadScene("Cheat sheet");
     }
 
     public void BackToPlay() {
+        Timer.onGoingTime.gameTime = Timer.onGoingTime.time;
         SceneManager.LoadScene("Start");
     }
     

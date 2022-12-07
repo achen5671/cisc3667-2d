@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1804236321}
   timerText: {fileID: 1950714384}
-  gameTime: 30
+  gameTime: 3
   stopTimer: 0
   dialogbox: {fileID: 0}
   time: 0
