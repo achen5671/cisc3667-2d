@@ -1804,6 +1804,7 @@ MonoBehaviour:
   Warning: {fileID: 0}
   timesUpText: {fileID: 0}
   timerSlider: {fileID: 0}
+  cheatSheet: {fileID: 0}
 --- !u!114 &1435033242
 MonoBehaviour:
   m_ObjectHideFlags: 0

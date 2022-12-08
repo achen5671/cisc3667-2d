@@ -14,6 +14,7 @@ public class ButtonBehaviour : MonoBehaviour
      private Scene scene;
      public GameObject timesUpText;
      public GameObject timerSlider;
+     public GameObject cheatSheet;
     
      
     // Start is called before the first frame update
@@ -105,10 +106,20 @@ public class ButtonBehaviour : MonoBehaviour
         SceneManager.LoadScene("Cheat sheet");
     }
 
+    public void CheatSheetPanel() {
+        cheatSheet.SetActive(true);
+    }
+
     public void BackToPlay() {
         if (s != null) {
             Timer.onGoingTime.gameTime = Timer.onGoingTime.time;
             SceneManager.LoadScene("Start");
+        }
+    }
+
+    public void BackToPlayPanel() {
+        if (s != null) {
+            cheatSheet.SetActive(false);
         }
     }
     
