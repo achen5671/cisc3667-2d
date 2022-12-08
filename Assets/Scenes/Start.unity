@@ -1774,7 +1774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1804236321}
   timerText: {fileID: 1950714384}
-  gameTime: 20
+  gameTime: 100
   stopTimer: 0
   time: 0
   timesUpText: {fileID: 1096810224}
@@ -2689,6 +2689,10 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 1294058913}
+    - target: {fileID: 9005947148585155243, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
+      propertyPath: facingRight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9005947148585155246, guid: 4a6b488481bac43958d990523cce12ad, type: 3}
       propertyPath: m_Sprite
       value: 
