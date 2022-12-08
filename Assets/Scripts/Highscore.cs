@@ -7,7 +7,7 @@ public class Highscore : MonoBehaviour
 {
     public const int NUM_HIGH_SCORES = 5;
     public const string NAME_KEY = "HSName";
-    public const string SCORE_KEY = "HScore";
+    public const string SCORE_KEY = "HSScore";
     [SerializeField] string playerName;
     [SerializeField] int playerScore;
 

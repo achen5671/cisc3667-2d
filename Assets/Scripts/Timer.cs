@@ -76,7 +76,7 @@ public class Timer : MonoBehaviour
             string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
 
             if(time <= 0) {
-                coroutine = endOfGame(5.0F);
+                coroutine = endOfGame(3.0F);
                 StartCoroutine(coroutine);
             }
 
@@ -92,8 +92,8 @@ public class Timer : MonoBehaviour
         stopTimer = true;
         timesUpText.SetActive(true);
         yield return new WaitForSeconds(waitTime);
-        ScoreKeeper.ResetScore();
         SceneManager.LoadScene("EndScene");
+        Destroy(gameObject);
     }
 
     void assign()

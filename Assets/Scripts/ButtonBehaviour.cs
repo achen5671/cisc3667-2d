@@ -75,7 +75,7 @@ public class ButtonBehaviour : MonoBehaviour
             // This is to set the name in the PersistentData so that it follows along throughout the game
             s = playerNameInput.text;
             PersistentData.Instance.SetName(s);
-
+            ScoreKeeper.ResetScore();
             SceneManager.LoadScene("Start");
         }
     }
