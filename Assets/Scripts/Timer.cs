@@ -78,11 +78,6 @@ public class Timer : MonoBehaviour
             if(time <= 0) {
                 coroutine = endOfGame(5.0F);
                 StartCoroutine(coroutine);
-                // stopTimer = true;
-                // timesUpText.SetActive(true);
-                // end game and reset score
-                // SceneManager.LoadScene("EndScene");
-                // ScoreKeeper.ResetScore();
             }
 
             if (stopTimer == false) {
@@ -97,9 +92,8 @@ public class Timer : MonoBehaviour
         stopTimer = true;
         timesUpText.SetActive(true);
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene("EndScene");
         ScoreKeeper.ResetScore();
-        Destroy(gameObject);
+        SceneManager.LoadScene("EndScene");
     }
 
     void assign()

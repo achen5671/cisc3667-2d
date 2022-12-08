@@ -7,8 +7,9 @@ using UnityEngine.UI;
 public class ButtonBehaviour : MonoBehaviour
 {
      [SerializeField] InputField playerNameInput;
-     [SerializeField] string s;
-     [SerializeField] GameObject Warning;
+     [SerializeField] string s; // what is s?
+     public GameObject BackToGameButton;
+     public GameObject Warning;
      private IEnumerator coroutine;
      private Scene scene;
      public GameObject timesUpText;
@@ -24,14 +25,16 @@ public class ButtonBehaviour : MonoBehaviour
         {
             playerNameInput.text = s;
         }
-        
-        Warning.SetActive(false);
+
+        if (Warning) Warning.SetActive(false);
+        if (BackToGameButton && s == null) BackToGameButton.SetActive(false);
+        else if (BackToGameButton && s != null) BackToGameButton.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void LateUpdate()
@@ -91,9 +94,9 @@ public class ButtonBehaviour : MonoBehaviour
         SceneManager.LoadScene("Settings");
     }
 
-    //unused for now
+    // todo: all this can be static
     public void EndGame() {
-        Timer.onGoingTime.gameTime =0;
+        Timer.onGoingTime.gameTime = 0;
         SceneManager.LoadScene("EndScene");
     }
 
@@ -103,8 +106,10 @@ public class ButtonBehaviour : MonoBehaviour
     }
 
     public void BackToPlay() {
-        Timer.onGoingTime.gameTime = Timer.onGoingTime.time;
-        SceneManager.LoadScene("Start");
+        if (s != null) {
+            Timer.onGoingTime.gameTime = Timer.onGoingTime.time;
+            SceneManager.LoadScene("Start");
+        }
     }
     
     public void CheatSheetWithoutTime() {

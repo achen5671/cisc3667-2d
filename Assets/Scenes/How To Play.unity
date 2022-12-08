@@ -199,8 +199,7 @@ MonoBehaviour:
     into a chest.\n\nControls: Use the Arrow Keys to move your character around.
     \n\nPress the space bar while touching a sign or chest to view the word that
     they have. \n\nPress the E Key to pick up a chest and press E again to put it
-    back down. \n\nPress the Q Key to match the chest and the sign together.\n\nLevel
-    1 Tip:\n\nLevel 2 Tip:\n\nLevel 3 Tip:"
+    back down. "
 --- !u!222 &33165805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -403,6 +402,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNameInput: {fileID: 1078412212}
   s: 
+  Warning: {fileID: 0}
+  timesUpText: {fileID: 0}
+  timerSlider: {fileID: 0}
 --- !u!114 &471936453
 MonoBehaviour:
   m_ObjectHideFlags: 0
