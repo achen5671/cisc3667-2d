@@ -19,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Pickup
-  - 
+  - Cheat Sheet Layer
   - 
   - 
   - 
@@ -56,4 +56,7 @@ TagManager:
     locked: 0
   - name: Signs
     uniqueID: 150399999
+    locked: 0
+  - name: Cheat Sheet
+    uniqueID: 2668848073
     locked: 0
