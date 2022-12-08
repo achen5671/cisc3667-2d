@@ -1367,6 +1367,9 @@ MonoBehaviour:
   playerNameInput: {fileID: 1547073595}
   s: 
   Warning: {fileID: 1282035144}
+  showMenuButton: 1
+  timesUpText: {fileID: 0}
+  timerSlider: {fileID: 0}
 --- !u!1 &1733900919
 GameObject:
   m_ObjectHideFlags: 0

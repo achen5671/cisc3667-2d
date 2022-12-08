@@ -108,7 +108,6 @@ public class ButtonBehaviour : MonoBehaviour
     }
     
     public void CheatSheetWithoutTime() {
-        
         SceneManager.LoadScene("Cheat sheet");
     }
 
