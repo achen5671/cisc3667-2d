@@ -25,7 +25,7 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
-        assign();
+        
         if (onGoingTime == null)
         {
             DontDestroyOnLoad(this);
@@ -35,7 +35,11 @@ public class Timer : MonoBehaviour
         {
             Destroy(gameObject);
         }
-       
+       if (timerSlider == null || timesUpText == null )
+        {
+            assign();
+
+        }
     }
 
     // Start is called before the first frame update
