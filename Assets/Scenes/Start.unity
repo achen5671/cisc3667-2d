@@ -1774,7 +1774,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerSlider: {fileID: 1804236321}
   timerText: {fileID: 1950714384}
+<<<<<<< Updated upstream
   gameTime: 100
+=======
+  gameTime: 80
+>>>>>>> Stashed changes
   stopTimer: 0
   time: 0
   timesUpText: {fileID: 1096810224}
