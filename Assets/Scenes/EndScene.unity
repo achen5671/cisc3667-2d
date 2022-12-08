@@ -322,7 +322,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNameInput: {fileID: 2069039143}
   s: 
+  BackToGameButton: {fileID: 0}
   Warning: {fileID: 0}
+  timesUpText: {fileID: 0}
+  timerSlider: {fileID: 0}
 --- !u!1 &128365887
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,15 +2450,15 @@ SpriteRenderer:
   m_SortingLayerID: -465165363
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 903393f785020484ebd64644e2a30f1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec0880eafacbe4e48971a2f8d6410638, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
+  m_Size: {x: 12.8, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2094477268
@@ -2466,8 +2469,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094477266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1274, y: 0.0189, z: 0}
-  m_LocalScale: {x: 1.1145481, y: 1.1072448, z: 1.0088}
+  m_LocalPosition: {x: -0.0078, y: 0.0382, z: 0}
+  m_LocalScale: {x: 1.3950884, y: 1.3913827, z: 1.0088}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

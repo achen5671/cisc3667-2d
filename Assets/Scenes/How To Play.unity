@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
+  m_AnchoredPosition: {x: -297, y: -320}
   m_SizeDelta: {x: 1217.65, y: 888.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &33165804
@@ -199,8 +199,7 @@ MonoBehaviour:
     into a chest.\n\nControls: Use the Arrow Keys to move your character around.
     \n\nPress the space bar while touching a sign or chest to view the word that
     they have. \n\nPress the E Key to pick up a chest and press E again to put it
-    back down. \n\nPress the Q Key to match the chest and the sign together.\n\nLevel
-    1 Tip:\n\nLevel 2 Tip:\n\nLevel 3 Tip:"
+    back down. "
 --- !u!222 &33165805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -403,6 +402,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNameInput: {fileID: 1078412212}
   s: 
+  BackToGameButton: {fileID: 0}
+  Warning: {fileID: 0}
+  timesUpText: {fileID: 0}
+  timerSlider: {fileID: 0}
 --- !u!114 &471936453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,7 +1011,7 @@ SpriteRenderer:
   m_SortingLayerID: 1642803445
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b092c83e454624ba68b6ed8867b30e25, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09ce4da77b01a4554b69f3ad2ddd12aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1071,7 +1074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -808, y: 511}
+  m_AnchoredPosition: {x: -720, y: 449}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1507315624

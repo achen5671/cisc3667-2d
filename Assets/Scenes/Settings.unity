@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 286, y: -173}
+  m_AnchoredPosition: {x: -342, y: 218}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42589099
@@ -886,6 +886,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNameInput: {fileID: 894119766}
   s: 
+  BackToGameButton: {fileID: 0}
+  Warning: {fileID: 0}
+  timesUpText: {fileID: 0}
+  timerSlider: {fileID: 0}
 --- !u!82 &685886761
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1427,7 +1431,7 @@ SpriteRenderer:
   m_SortingLayerID: 1642803445
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b092c83e454624ba68b6ed8867b30e25, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09ce4da77b01a4554b69f3ad2ddd12aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
