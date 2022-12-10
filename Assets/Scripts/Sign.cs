@@ -103,7 +103,6 @@ public class Sign : MonoBehaviour
         List<string> conjugations = GetConjugationValues(pronoun);
         int rand = random.Next(conjugations.Count);
 
-        // Debug.Log(conjugations[rand]);
         dialog = conjugations[rand];
     }
 
