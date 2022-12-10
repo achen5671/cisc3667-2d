@@ -24,16 +24,10 @@ public class Sign : MonoBehaviour
     {
         if (isChest) {
             isSign = false;
-            // var _dialogText = GetComponent<Sign>().transform.GetChild(0).GetComponent<Text>();
-            // var _dialogBox = GameObject.Find("Canvas").GetComponent<Transform>().Find("dialog box").GetComponent<GameObject>();
-
-            // dialogBox = _dialogBox;
-            // dialogText = _dialogText;
-            // dialog = dialogText.text;
-            // Source = gameObject.GetComponent<AudioSource>();
             dialogBox = GameObject.Find("dialog box");
             dialogText = GameObject.FindGameObjectWithTag("DialogText").GetComponent<Text>();
             dialog = dialogText.text;
+
             // If it's a chest, randomly give dialog a verb from the list
             GetRandomConjugatedVerb();
         }
@@ -113,29 +107,21 @@ public class Sign : MonoBehaviour
         dialog = conjugations[rand];
     }
 
+    // todo: need better name. If player press Q, call this function to check if conjugation is correct
     public void InteractSign(Collider2D player){
         PickUp verbSign = player.GetComponent<PickUp>();
-        if (verbSign != null && isSign) {
-            if(CheckConjugation(dialog, verbSign.GetItemHoldingDialog())){
-                // add score
-                ScoreKeeper.AddScore();
-                // todo: play sound
-                Debug.Log("SCORE!");
-                // Destroy(verbSign.GetItem());
-                // Destroy(gameObject);
-                GetComponent<AudioSource>().PlayOneShot(correct);
-                Destroy(verbSign.itemHolding);
-                // TODO: destory chest
-            }else{
-                ScoreKeeper.MinusScore();
-                // todo: play sound
-                
-                GetComponent<AudioSource>().PlayOneShot(wrong);
-                Debug.Log("WRONG!");
-                Destroy(verbSign.itemHolding);
+        if (verbSign == null && !isSign) return;
 
-            }
-        } 
+        if(CheckConjugation(dialog, verbSign.GetItemHoldingDialog())){
+            // add score
+            ScoreKeeper.AddScore();
+            GetComponent<AudioSource>().PlayOneShot(correct);
+            Destroy(verbSign.itemHolding);
+        }else{
+            ScoreKeeper.MinusScore();
+            GetComponent<AudioSource>().PlayOneShot(wrong);
+            Destroy(verbSign.itemHolding);
+        }
     }
 
 }
