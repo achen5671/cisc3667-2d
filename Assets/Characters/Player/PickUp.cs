@@ -37,18 +37,6 @@ public class PickUp : MonoBehaviour
             }
 
         }
-
-        // unused for nowthrow item. Testing
-        // Used to destroy item for now but will minus points
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (itemHolding)
-            {
-                // StartCoroutine(ThrowItem(itemHolding));
-                Destroy(itemHolding);
-                // itemHolding = null;
-            }
-        }
     }
 
     // return item that the player is holding
@@ -60,6 +48,8 @@ public class PickUp : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // Use: StartCoroutine(ThrowItem(itemHolding));
+    // to start coroutine
     // todo: not working
     // IEnumerator ThrowItem(GameObject item)
     // {
