@@ -53,7 +53,7 @@ public class Sign : MonoBehaviour
             }
         }
 
-        if (playerInRange && Input.GetKeyDown(KeyCode.Q)) {
+        if (playerInRange && Input.GetKeyDown(KeyCode.Q) && isSign) {
             InteractSign(player);
         }
     }

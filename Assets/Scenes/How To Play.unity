@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 33165803}
   - component: {fileID: 33165805}
   - component: {fileID: 33165804}
+  - component: {fileID: 33165806}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -148,18 +149,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33165802}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 471936456}
-  m_RootOrder: 2
+  m_Father: {fileID: 568974348}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297, y: -320}
-  m_SizeDelta: {x: 1217.65, y: 888.1}
+  m_AnchoredPosition: {x: 0.000021680258, y: -127}
+  m_SizeDelta: {x: 1810.08, y: 888.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &33165804
 MonoBehaviour:
@@ -194,12 +195,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Match the spanish words in the chests to the words on the signs in the
-    level. It's a good idea to check out which words are on the sign before looking
-    into a chest.\n\nControls: Use the Arrow Keys to move your character around.
-    \n\nPress the space bar while touching a sign or chest to view the word that
-    they have. \n\nPress the E Key to pick up a chest and press E again to put it
-    back down. "
+  m_Text: "Check the cheat sheet before starting the game! You can always reference
+    the cheat sheet when the game has started.\n\nThis game will get you familiar
+    with the basics of spanish conjugation!\n\nMatch as many spanish verbs in the
+    chests to the pronouns on the signs! It's a good idea to check out which words
+    are on the sign before looking into a chest.\n\nControls: \n\n* Use the Arrow
+    Keys to move your character around. \n* Press the space bar while touching a
+    sign or chest to view the word that they have. \n* Press the E Key to pick up
+    a chest and press E again to put it back down. \n* Press Q to match the word
+    in front of a sign!"
 --- !u!222 &33165805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -208,6 +212,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33165802}
   m_CullTransparentMesh: 1
+--- !u!114 &33165806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33165802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &152747816
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +425,7 @@ MonoBehaviour:
   Warning: {fileID: 0}
   timesUpText: {fileID: 0}
   timerSlider: {fileID: 0}
+  cheatSheet: {fileID: 0}
 --- !u!114 &471936453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,7 +501,7 @@ RectTransform:
   m_Children:
   - {fileID: 1507315623}
   - {fileID: 1078412213}
-  - {fileID: 33165803}
+  - {fileID: 568974348}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -490,6 +510,83 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &568974347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568974348}
+  - component: {fileID: 568974350}
+  - component: {fileID: 568974349}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &568974348
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568974347}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 33165803}
+  m_Father: {fileID: 471936456}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000009536743, y: -146}
+  m_SizeDelta: {x: 1842.61, y: 749.48}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &568974349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568974347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.50980395}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &568974350
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568974347}
+  m_CullTransparentMesh: 1
 --- !u!1 &663584701
 GameObject:
   m_ObjectHideFlags: 0
