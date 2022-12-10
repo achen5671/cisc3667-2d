@@ -32,17 +32,6 @@ public class PlayerMovement : MonoBehaviour
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
 
-        //animate();
-
-        /*if (change != Vector3.zero) {
-          MoveCharacter(); 
-        }
-
-        else {
-          animate(motion);
-          animator.SetInteger("Motion", idle);
-        }*/
-
         if(Input.GetKey("down")) {
           animator.SetInteger("Motion", walk_down); //Play Walk Down Animation
           MoveCharacter(); 
@@ -79,32 +68,4 @@ public class PlayerMovement : MonoBehaviour
    void MoveCharacter() {
         myRigidBody.MovePosition(transform.position + change * speed * Time.fixedDeltaTime); 
    }
-
-   /*void animate() {
-     switch(change) {
-          case change.y < 0:
-               animator.SetInteger("Motion", walk_down); //Play Walk Down Animation
-               MoveCharacter(); 
-               break;
-
-          case change.y > 0:
-               animator.SetInteger("Motion", walk_up); //Play Walk Up Animation
-               MoveCharacter(); 
-               break;
-
-          case change.x > 0:
-               animator.SetInteger("Motion", walk_side); //Play Walk Side Animation
-               MoveCharacter(); 
-               break;
-
-          case change.x < 0:
-               animator.SetInteger("Motion", walk_side); //Play Walk Side Animation Flipped
-               MoveCharacter(); 
-               break;
-
-          default:
-               animator.SetInteger("Motion", idle); //Play Walk Down Animation
-               break;
-     }
-   }*/
 }

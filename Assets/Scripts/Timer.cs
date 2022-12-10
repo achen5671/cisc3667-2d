@@ -28,8 +28,9 @@ public class Timer : MonoBehaviour
         
         if (onGoingTime == null)
         {
-            DontDestroyOnLoad(this);
-            onGoingTime = this;
+            //Note: It was commented out because we do not need to keep for cheat sheet scene, it threw an error
+            //DontDestroyOnLoad(this);
+            //onGoingTime = this;
         }
         else
         {

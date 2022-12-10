@@ -53,7 +53,7 @@ public class Sign : MonoBehaviour
             }
         }
 
-        if (playerInRange && Input.GetKeyDown(KeyCode.Q)) {
+        if (playerInRange && Input.GetKeyDown(KeyCode.Q) && isSign) {
             InteractSign(player);
         }
     }
@@ -103,14 +103,15 @@ public class Sign : MonoBehaviour
         List<string> conjugations = GetConjugationValues(pronoun);
         int rand = random.Next(conjugations.Count);
 
-        // Debug.Log(conjugations[rand]);
         dialog = conjugations[rand];
     }
 
     // todo: need better name. If player press Q, call this function to check if conjugation is correct
     public void InteractSign(Collider2D player){
         PickUp verbSign = player.GetComponent<PickUp>();
+
         if (verbSign == null && !isSign) return;
+        if (verbSign.itemHolding == null) return;
 
         if(CheckConjugation(dialog, verbSign.GetItemHoldingDialog())){
             // add score
