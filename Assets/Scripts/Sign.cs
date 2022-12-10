@@ -110,7 +110,9 @@ public class Sign : MonoBehaviour
     // todo: need better name. If player press Q, call this function to check if conjugation is correct
     public void InteractSign(Collider2D player){
         PickUp verbSign = player.GetComponent<PickUp>();
+
         if (verbSign == null && !isSign) return;
+        if (verbSign.itemHolding == null) return;
 
         if(CheckConjugation(dialog, verbSign.GetItemHoldingDialog())){
             // add score
