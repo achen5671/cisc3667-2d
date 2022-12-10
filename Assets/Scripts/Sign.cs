@@ -14,6 +14,7 @@ public class Sign : MonoBehaviour
     static System.Random random = new System.Random();
     public bool isChest = false;
     public bool isSign = true;
+    public Collider2D player; 
     // [SerializeField] AudioSource Source;
     [SerializeField] AudioClip wrong;
     [SerializeField] AudioClip correct;
@@ -57,34 +58,16 @@ public class Sign : MonoBehaviour
                 dialogText.text = dialog;
             }
         }
+
+        if (playerInRange && Input.GetKeyDown(KeyCode.Q)) {
+            InteractSign(player);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")){
             playerInRange = true;
-
-            PickUp verbSign = other.GetComponent<PickUp>();
-            if (verbSign != null && isSign) {
-                if(CheckConjugation(dialog, verbSign.GetItemHoldingDialog())){
-                    // add score
-                    ScoreKeeper.AddScore();
-                    // todo: play sound
-                    Debug.Log("SCORE!");
-                    // Destroy(verbSign.GetItem());
-                    // Destroy(gameObject);
-                    GetComponent<AudioSource>().PlayOneShot(correct);
-                    Destroy(verbSign.itemHolding);
-                    // TODO: destory chest
-                }else{
-                    ScoreKeeper.MinusScore();
-                    // todo: play sound
-                    
-                    GetComponent<AudioSource>().PlayOneShot(wrong);
-                    Debug.Log("WRONG!");
-                    Destroy(verbSign.itemHolding);
-
-                }
-            } 
+            player = other;
         }
         
     }
@@ -128,6 +111,31 @@ public class Sign : MonoBehaviour
 
         // Debug.Log(conjugations[rand]);
         dialog = conjugations[rand];
+    }
+
+    public void InteractSign(Collider2D player){
+        PickUp verbSign = player.GetComponent<PickUp>();
+        if (verbSign != null && isSign) {
+            if(CheckConjugation(dialog, verbSign.GetItemHoldingDialog())){
+                // add score
+                ScoreKeeper.AddScore();
+                // todo: play sound
+                Debug.Log("SCORE!");
+                // Destroy(verbSign.GetItem());
+                // Destroy(gameObject);
+                GetComponent<AudioSource>().PlayOneShot(correct);
+                Destroy(verbSign.itemHolding);
+                // TODO: destory chest
+            }else{
+                ScoreKeeper.MinusScore();
+                // todo: play sound
+                
+                GetComponent<AudioSource>().PlayOneShot(wrong);
+                Debug.Log("WRONG!");
+                Destroy(verbSign.itemHolding);
+
+            }
+        } 
     }
 
 }
