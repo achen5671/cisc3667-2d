@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChestSpawner : MonoBehaviour
 {
-    const int Num_of_Chest = 5;
+    const int Num_of_Chest = 15;
     [SerializeField] GameObject Chest;
     // Start is called before the first frame update
     void Start()
